@@ -45,7 +45,15 @@ public class Main2 {
         System.out.print("Введите размерность матрицы: ");
         int stringMN  = scanner.nextInt();
 
+        if (stringMN < 2 || stringMN > 10) {
+            System.out.println("Ошибка! Размерность должна быть от 2 до 10.");
+            return; 
+        }
+
+
         int[] range = {0, 99};
         versions2(stringMN, range);
+
+        scanner.close();
     }
 }
